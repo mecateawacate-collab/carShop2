@@ -1,0 +1,185 @@
+# Connect to Postgres via the shared transaction-mode pooler (IPv4-only)
+DATABASE_URL="postgresql://postgres.seacduobnuaybywwohbt:[YOUR-PASSWORD]@aws-0-us-east-2.pooler.supabase.com:6543/postgres?pgbouncer=true"
+
+# Connect to Postgres via the shared session-mode pooler (used for migrations)
+DIRECT_URL="postgresql://postgres.seacduobnuaybywwohbt:[YOUR-PASSWORD]@aws-0-us-east-2.pooler.supabase.com:5432/postgres"
+
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+
+
+
+Lista de coches para publicar:
+Toyota Supra MK4
+
+Nombre: Toyota Supra MK4
+
+Marca: Toyota
+
+Precio: 45000
+
+Descripción: Leyenda japonesa con motor 2JZ-GTE biturbo y rendimiento legendario en pista.
+
+Imagen: [https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80)
+
+Nissan GT-R R35
+
+Nombre: Nissan GT-R Nismo
+
+Marca: Nissan
+
+Precio: 115000
+
+Descripción: Superdeportivo conocido como "Godzilla", tracción integral y aceleración brutal.
+
+Imagen: [https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=800&q=80)
+
+Ford Mustang Shelby GT500
+
+Nombre: Shelby GT500
+
+Marca: Ford
+
+Precio: 79000
+
+Descripción: Muscle car americano con un motor V8 supercargado y potencia desbordante.
+
+Imagen: [https://images.unsplash.com/photo-1584345604476-8ec5e12e42dd?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1584345604476-8ec5e12e42dd?auto=format&fit=crop&w=800&q=80)
+
+Porsche 911 GT3 RS
+
+Nombre: 911 GT3 RS
+
+Marca: Porsche
+
+Precio: 220000
+
+Descripción: Máquina de circuito homologada para la calle con aerodinámica extrema.
+
+Imagen: [https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=800&q=80)
+
+Chevrolet Corvette C8
+
+Nombre: Corvette Stingray
+
+Marca: Chevrolet
+
+Precio: 68000
+
+Descripción: Superdeportivo de motor central con diseño agresivo y alto rendimiento.
+
+Imagen: [https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80)
+
+BMW M4 Competition
+
+Nombre: M4 Competition Coupe
+
+Marca: BMW
+
+Precio: 78000
+
+Descripción: Deportivo de lujo alemán con un balance perfecto entre elegancia y velocidad pura.
+
+Imagen: [https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80)
+
+Mazda RX-7 FD
+
+Nombre: RX-7 Spirit R
+
+Marca: Mazda
+
+Precio: 38000
+
+Descripción: Clásico rotativo ligero con manejo preciso y estética atemporal.
+
+Imagen: [https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=800&q=80)
+
+Lamborghini Huracán
+
+Nombre: Huracán EVO
+
+Marca: Lamborghini
+
+Precio: 260000
+
+Descripción: Motor V10 atmosférico con un rugido inconfundible y diseño futurista.
+
+Imagen: [https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=800&q=80)
+
+Audi R8 V10
+
+Nombre: R8 Performance
+
+Marca: Audi
+
+Precio: 198000
+
+Descripción: Superdeportivo con tracción Quattro y tecnología inspirada en las carreras de resistencia.
+
+Imagen: [https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=800&q=80)
+
+Subaru Impreza WRX STI
+
+Nombre: WRX STI Hatchback
+
+Marca: Subaru
+
+Precio: 34000
+
+Descripción: El rey indiscutible de los rallys con tracción total y alerón icónico.
+
+Imagen: [https://images.unsplash.com/photo-1626668893632-6f3a4466d22f?auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1626668893632-6f3a4466d22f?auto=format&fit=crop&w=800&q=80)
+
+
+
+
+2. Stack Tecnológico y LibreríasFrontendFramework: Next.js (React) con arquitectura App Router.Lenguaje: TypeScript.Estilos: Tailwind CSS.Iconografía: lucide-react (iconos vectoriales integrados mediante componentes).Cliente de Base de Datos / Auth: @supabase/supabase-js.BackendLenguaje: Go (Golang).Framework Web: Go Fiber ([github.com/gofiber/fiber/v2](https://github.com/gofiber/fiber/v2)) por su alto rendimiento y baja latencia.ORM: GORM (gorm.io/gorm).Driver de Base de Datos: gorm.io/driver/postgres.Manejo de CORS: Middleware nativo de Fiber configurado para solicitudes desde http://localhost:3000.Base de Datos y Servicios CloudBase de datos: PostgreSQL administrada en la nube mediante Supabase (alojada en AWS us-east-2).   Autenticación: Supabase Auth (gestión segura de credenciales, tokens de sesión y hashing de contraseñas).   Almacenamiento de imágenes: Enlaces directos a CDN de alta resolución (Unsplash).3. Estructura del Proyecto (Monorepo Local)PlaintextcarShop/
+├── backend/
+│   ├── go.mod                     # Definición de dependencias en Go
+│   ├── go.sum                     # Checksums de librerías de Go
+│   └── main.go                    # Servidor Fiber, conexión GORM, rutas y lógica de negocio
+│
+└── frontend/
+    ├── app/
+    │   ├── layout.tsx             # Envoltura principal con barra de navegación
+    │   ├── globals.css            # Configuración global y directivas de Tailwind CSS
+    │   ├── page.tsx               # Redirección inicial hacia /login
+    │   ├── BarraNavegacion.tsx    # Navbar dinámico sensible al rol y contador de carrito
+    │   ├── login/
+    │   │   └── page.tsx           # HU-001, HU-002, HU-003: Autenticación y acceso visitante
+    │   ├── tienda/
+    │   │   └── page.tsx           # HU-004, HU-005, HU-006: Catálogo, búsqueda y modal
+    │   ├── carritoCompras/
+    │   │   └── page.tsx           # HU-007, HU-008: Gestión de ítems y cálculo de totales
+    │   ├── pagarProductos/
+    │   │   └── page.tsx           # HU-009, HU-010: Confirmación o cancelación de compra
+    │   └── adminPanel/
+    │       └── page.tsx           # HU-011 a HU-015: CRUD completo y acceso directo a tienda
+    │
+    ├── hooks/
+    │   └── useProteccionRuta.ts   # Hook para restricción de acceso según rol autenticado
+    ├── servicios/
+    │   ├── clienteSupabase.ts     # Inicialización del cliente Supabase
+    │   └── servicioSesion.ts      # Verificación de tokens y consulta de roles contra la API
+    ├── next.config.ts             # Configuración de dominios remotos para imágenes
+    ├── package.json               # Dependencias del cliente (Next.js, Lucide, Tailwind)
+    └── tsconfig.json              # Configuración de compilación de TypeScript
+4. Matriz de Historias de Usuario (15 HUs)IDÉpica / MóduloTítuloCriterio de Aceptación / ComportamientoHU-001loginSaltar loginOpción para acceder al catálogo como visitante sin credenciales.HU-002loginIniciar sesiónValidación de correo y contraseña contra Supabase Auth.HU-003loginVer contraseñaBotón tipo alternador (toggle) con iconos de ojo para revelar u ocultar la clave.HU-004tiendaVer detalles de productoVentana modal con imagen grande, descripción técnica, año y precio.HU-005tiendaBuscar productosFiltro de búsqueda en tiempo real conectado al endpoint /api/autos?buscar=.HU-006tiendaAgregar al carritoIncorporación del vehículo al almacenamiento local (localStorage) solo para usuarios autenticados.HU-007carritoComprasQuitar productoEliminación individual de productos y actualización inmediata del balance total.HU-008carritoComprasRedireccionar al pagoBotón para consolidar los ítems seleccionados y avanzar a /pagarProductos.HU-009pagosProductosCancelar pagoRegreso seguro a /carritoCompras sin perder la selección de ítems.HU-010pagosProductosRealizar pagoSimulación exitosa de la pasarela, vaciado del carrito y pantalla de confirmación.HU-011adminPanelAgregar carroFormulario con validación para persistir nuevos autos en PostgreSQL vía Go.HU-012adminPanelEliminar carroBotón de borrado directo por identificador (DELETE /api/autos/:id).HU-013adminPanelEditar carroCarga de datos existentes en el formulario para actualización mediante PUT.HU-014adminPanelCancelar ediciónBotón para descartar cambios en curso y restaurar el formulario a estado vacío.HU-015adminPanelAcceso a tiendaEnlace directo para probar los cambios en la tienda sin pasar por el login.5. Flujo de Funcionamiento y Arquitectura de Datos[ Navegador / Next.js ]
+   │
+   ├── 1. Autenticación directa ──> [ Supabase Auth ] (JWT / Sesión activa)
+   │
+   ├── 2. Consulta y CRUD (HTTP/JSON) ──> [ Backend Go (Fiber) ]
+                                                │
+                                                └── 3. Consultas SQL / GORM ──> [ Supabase (PostgreSQL) ]
+                                                                                   ├── Tabla: autos
+                                                                                   └── Tabla: roles
+Flujo de Navegación del UsuarioAcceso Inicial (/ -> /login):El usuario decide si introduce sus credenciales o hace clic en "Continuar como visitante" (HU-001).Al iniciar sesión con éxito, Supabase genera el token JWT y se redirige a /tienda.Catálogo (/tienda):Next.js solicita los vehículos al backend (GET /api/autos), el cual consulta la tabla autos en Supabase.El buscador dispara peticiones con el parámetro ?buscar=termino ejecutando filtros ILIKE en Go.Si un visitante intenta agregar un auto al carrito, se le bloquea y se le invita a autenticarse.Gestión del Carrito (/carritoCompras):El carrito vive de forma reactiva en localStorage. Cualquier cambio dispara eventos personalizados en la ventana del navegador para refrescar el contador del navbar.Checkout (/pagarProductos):El cliente visualiza el desglose económico final.Cancelar: vuelve al carrito manteniendo los datos intactos.Confirmar: vacía el almacenamiento local y muestra la confirmación de transacción aprobada.Panel Administrativo (/adminPanel):Al acceder, el hook useProteccionRuta ejecuta una petición a /api/verificar-rol?email=.... Go valida contra la tabla roles en Supabase. Si el usuario no tiene registrado el rol admin, es expulsado automáticamente a la tienda.   Si está autorizado, cuenta con control total para insertar, editar o eliminar registros directamente en la base de datos de producción.
